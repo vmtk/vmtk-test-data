@@ -56,6 +56,20 @@ data, our CI suite will not have access to files, so your tests that passed
 locally may appear to fail when they are pushed - Don't worry! It's not you,
 it's our system! 
 
+## Third-party data
+
+The following files in `input` are from the
+[Vascular Model Repository](https://www.vascularmodel.com), subject to the
+terms in `input/vmr-README-COPYRIGHT.txt`:
+
+- `vmr-0159-aorta-surface.vtp`: model `Models/O690801_2007_aorta.vtp` of
+  project `0159_H_AO_H` (healthy aorta with the left carotid and both subclavian
+  arteries), unmodified.
+- `vmr-0159-aorta-centerline.vtp`: centerlines of this model computed with
+  `vtkvmtkPolyDataCenterlines` as SimVascular does, from the surface point
+  nearest to the center of the `cap_aorta_main` cap to those nearest to the
+  centers of the other caps.
+
 ## Questions? Concerns?  If you have any questions about the contributing
 process, or just want to learn more about the library, feel free to reach out
 to us on the mailing list or the issue tracker. We'd love to chat! 
